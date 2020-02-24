@@ -17,8 +17,8 @@ function para=perform_fitting(data,labels, flag)
     feature_space = get_features (data, flag);
     weights=calculate_weight(data, labels);
     
-    num_folds=3;
-    num_shuffles=2;
+    num_folds=10;
+    num_shuffles=5;
     test_kfold=zeros(num_shuffles*num_folds,11);
     index=1;
     for j = 1:num_shuffles
